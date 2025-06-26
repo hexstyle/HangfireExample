@@ -18,6 +18,14 @@ docker-compose up
 ```
 
 ## Конфигурация
+### Пакеты
+Добавляем в проект пакеты Hangfire
+```
+dotnet add package Hangfire
+dotnet add package Hangfire.AspNetCore
+dotnet add package Hangfire.Console
+dotnet add package Hangfire.PostgreSql
+```
 ### Базовая настройка сервера
 Настраивается как обычный Asp.Net сервис. Для подключения к СУБД лучше использовать Factory-класс, создающий подключение (прим.: [PostgresConnectionFactory.cs](PostgresConnectionFactory.cs))
 ```
