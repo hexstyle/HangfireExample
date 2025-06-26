@@ -4,13 +4,6 @@ namespace HangfireExample.Jobs;
 
 public class MyJob
 {
-    private readonly ILogger<MyJob> _logger;
-
-    public MyJob(ILogger<MyJob> logger)
-    {
-        _logger = logger;
-    }
-
     public void Run(PerformContext context)
     {
         context.WriteLine( $"Job started at {DateTime.Now}");

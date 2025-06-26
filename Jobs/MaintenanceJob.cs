@@ -7,12 +7,10 @@ namespace HangfireExample.Jobs;
 
 public class MaintenanceJob
 {
-    private readonly ILogger<MaintenanceJob> _logger;
     private readonly IConnectionFactory _connFactory;
 
-    public MaintenanceJob(ILogger<MaintenanceJob> logger, IConnectionFactory connFactory)
+    public MaintenanceJob(IConnectionFactory connFactory)
     {
-        _logger = logger;
         _connFactory = connFactory;
     }
 
